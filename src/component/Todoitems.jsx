@@ -14,10 +14,18 @@ export default function Todoitem({ item, todos, setTodos }) {
   }
   const className = item.done ? styles.completed : "";
 
+  // const name =  "John"
+  // const age = 30
+  // const message = `Hello my name is ${name} and i am ${age} Years Old`
+  // console.log(message);
+
   return (
     <div className={styles.item}>
       <div className={styles.itemName}>
-        <span className={className} onClick={() => handleClick(item.name)}>
+        <span
+          className={`${className} ${styles.pointer}`}
+          onClick={() => handleClick(item.name)}
+        >
           {item.name}
         </span>
 
